@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./navbar.css">
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  </head>
+  <body>
+
+    <nav>
+      <a href="../HomePage/homepage.html"><img class="logo" src="./download.webp"></a>
+      <div>    
+          <span>
+              <i class="bi bi-house-door"></i>
+              <a id="home" href="../HomePage/homepage.html">Home</a>
+          </span>
+          <span>
+              <i class="bi bi-heart-pulse-fill"></i>
+              <a id="predictor" href="../Form/form.html">Predictor</a>
+          </span>
+          <span>
+              <i class="bi bi-person-circle"></i>
+              <a name="sign" href="#"></a>
+          </span>
+          <div class="toggle_btn" id="tgbtn">
+              <i class="bi bi-list" id="tgbtnicon"></i>
+          </div>
+      </div>
+      <div class="dropdown_menu" id="drop">
+          <span>
+              <i class="bi bi-house-door"></i>
+              <a id="home" href="../HomePage/homepage.html">Home</a>
+          </span>
+          <span>
+              <i class="bi bi-heart-pulse-fill"></i>
+              <a id="predictor" href="../Form/form.html">Predictor</a>
+          </span>
+          <span>
+              <i class="bi bi-person-circle"></i>
+              <a name="sign" href="#"></a>
+          </span>
+      </div>
+  </nav>
+
+    <div id="banner">
+      <img src="./healthcare.png" alt="img1" id="img1" />
+      <h1>Risk Report</h1>
+      <img src="./healthcare.png" alt="img1" id="img2" />
+      <!-- <img src="./frimg.png" alt="img2" id="img2"> -->
+    </div>
+
+    <hr />
+    <div id="content">
+      <h1></h1>
+      <h2>Patient Information</h2>
+      <div id="patient">
+              <span><pre>Patient Name:<text id="name"></text></pre></span>
+              <span> 
+                <pre>Gender:<text id="gender"></text></pre>
+              </span>
+              <span>
+              <pre>Phone:<text id="mob"></text></pre>
+              </span>
+              <span>
+                <pre>Age:<text id="age"></text></pre>
+              </span>
+          
+        <!-- <img src="./examination.png" alt="imgp" id="imgp"> -->
+      </div>
+      <hr />
+      <div id="result_info">
+        <div id="input">
+          <h2>Test Input</h2>
+          <div id="f_table">
+            <table class="table table-striped table-dark w-100 rounded">
+              <thead>
+                <tr id="thead">
+                  <th>Tests</th>
+                  <th colspan="2">values</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="totch_f">
+                  <th>Total cholesterol:</th>
+                  <td id="totch" colspan="2"></td>
+                </tr>
+                <tr id="hdlch_f">
+                  <th>HDL cholesterol:</th>
+                  <td id="hdlch" colspan="2"></td>
+                </tr>
+                <tr id="bpv_f">
+                  <th>Systolic BP:</th>
+                  <td id="bpt"></td>
+                  <td id="bpv"></td>
+                </tr>
+                <tr id="smk_f">
+                  <th>Smoker:</th>
+                  <td id="smk" colspan="2"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- <img src="./blood-test.png" alt="img_test" id="img_test"> -->
+        </div>
+        <div id="result">
+          <div>
+            <h2>Test Results</h2>
+            <p>10-year risk in % :</p>
+          </div>
+          <div id="res_prog">
+            <div
+              class="circular-progress"
+              data-inner-circle-color="white"
+              data-percentage="70"
+              data-progress-color="rebeccapurple"
+              data-bg-color="black"
+            >
+              <div class="inner-circle"></div>
+              <p class="percentage">0%</p>
+            </div>
+          </div>
+          <!-- <img src="./medical-history.png" alt="img_test" id="img_test"> -->
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div id="footer">
+      <div id="editor"></div>
+      <button id="cmd" onClick="downloadPDF()">Generate PDF<i class="fa fa-download"></i></button>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+        integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+        crossorigin="anonymous"
+      ></script>
+    </div>
+
+    <footer>
+      <br>
+      <h1 class="text" style="letter-spacing: 4px; padding-left: 2%;">HeartProfile</h1>
+      <p style="color: black; padding-left: 2%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, provident.</p>
+      <div class="footer_div">
+          <div class="col">
+              <h5 class="text text-uppercase mb-4">COMPANY</h5>
+              <p>About HeartProfile</p> 
+              <p><a href="https://en.wikipedia.org/wiki/Framingham_Risk_Score#Scoring" target="_blank">Framingham Scoring</a></p> 
+              <p>In the news</p> 
+              <p>Career</p> 
+              <p>Contact</p>
+          </div>
+          <div class="col">
+              <h5 class="text text-uppercase mb-4">OUR POLICIES</h5>
+              <p>Terms & Conditions</p> 
+              <p>Privacy policy</p> 
+              <p>Medical policy</p>
+          </div>
+          <div class="col">
+              <h5 class="text text-uppercase mb-4">CONTACT</h5>
+              <p><i class="bi bi-envelope-fill"></i> heartprofile@gmail.com</p> 
+              <p><i class="bi bi-house-fill"></i> XYZ, ABCD</p> 
+              <p><i class="bi bi-github"></i> <a href="https://github.com/Jangyaseni666/HeartProfile"> Heart Profile</a></p> 
+              <p><i class="bi bi-telephone-fill"></i> +01 234 567 08</p> 
+              <p><i class="bi bi-file-earmark-break"></i> +01 234 567 08 </p> 
+          </div>
+      </div>
+      <hr>
+      <span class="copy">© 2020 Copyright: HeartProfile.com</span>
+  </footer>
+    <script src="../Nav/navbar.js"></script>
+    <script src="./output.js"></script>
+  </body>
+</html>

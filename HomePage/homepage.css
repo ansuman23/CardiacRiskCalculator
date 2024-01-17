@@ -1,0 +1,204 @@
+body{ 
+  background: white;
+}
+
+/* nav {
+  background-color: #ff6962;
+  border: 4px solid rgb(233, 63, 63);
+  border-radius: 5px;
+}
+nav h1 {
+  padding-left: 5%;
+  background-color: #ff6962;
+} */
+#body h1 {
+  padding: 2% 0% 0% 3%;
+}
+#upper {
+  margin: 2%;
+  display: flex;
+  align-items: center;
+  padding: 2%;
+  border-radius: 5px;
+  border: 3px solid rgb(227, 63, 63);
+  box-shadow: rgba(191, 136, 136, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+#text {
+  flex: 1;
+  padding: 2%;
+  text-align: justify;
+  font-size: large;
+}
+
+#image {
+  flex: 1;
+  padding: 1%;
+  text-align: center;
+}
+
+#image img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+}
+
+#upper .calcRisk{
+  font-family: "Rockwell Bold", monospace;
+  background-color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  border: solid 0.125rem #121212;
+  box-shadow: 0.25rem 0.25rem #121212;
+  transition: transform 50ms, box-shadow 50ms;
+}
+
+#upper .calcRisk:active{
+  transform: translate(.125rem,.125rem);
+  box-shadow: .125rem .125rem #121212;
+}
+
+#lower {
+  margin: 2%;
+  padding: 2%;
+  border-radius: 5px;
+  border: 3px solid rgb(227, 63, 63);
+  box-shadow: rgba(191, 136, 136, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+#lower h2 {
+  padding: 1% 2%;
+}
+#factors {
+  display: flex;
+  justify-content: space-around;
+}
+#factors div {
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+  border-radius: 5px;
+  background-color: #ffd5d4;
+  padding: 5%;
+  font-family:"Rockwell Extra Bold", "Rockwell Bold", monospace;
+  margin: 1%;
+  text-transform: uppercase;
+  text-align: center;
+  transition: transform 0.2s;
+}
+#factors div:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transform: scale(1.1);
+}
+#carouselExampleControls {
+  margin: 2%;
+  padding: 2%;
+  border: 3px solid rgb(227, 63, 63);
+  border-radius: 5px;
+  box-shadow: rgba(191, 136, 136, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+#carouselExampleControls h2 {
+  /* font-size: 25px; */
+  /* margin: 2%; */
+  padding: 1% 2%;
+  /* border: 1px solid gray; */
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+}
+#lower_div {
+  margin: 2%;
+  padding: 2%;
+  border: 3px solid rgb(227, 63, 63);
+  border-radius: 5px;
+  box-shadow: rgba(191, 136, 136, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+#lower_div h2 {
+  /* font-size: 25px; */
+  /* margin: 2%; */
+  padding: 1% 2%;
+  /* border: 1px solid gray; */
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+}
+#lower_div1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#lower_div1 div {
+  /* border: 2px solid gray; */
+  background-color: #ffd5d4;
+  padding: 1% 1% 1% 2%;
+  border-radius: 5px;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+  transition: transform 0.2s;
+}
+#lower_div1 div:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  transform: scale(1.1);
+}
+#lower_div img {
+  width: 35%;
+  height: 70%;
+}
+#lower_div1 div h3 {
+  font-size: 20px;
+  background-color: #ffd5d4;
+}
+#lower_div1 div img {
+  background-color: #ffd5d4;
+}
+
+@media screen and (max-width: 768px) {
+  #upper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #text {
+    text-align: justify;
+    padding: 3%;
+  }
+  #factors {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+  }
+  #image {
+    max-width: 100%;
+  }
+  #lower h2 {
+    text-align: center;
+  }
+  #lower_div1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2%;
+    /* margin-left: 5%;
+      margin-right: 5%; */
+  }
+  #lower_div1 div {
+    /* border: 2px solid gray; */
+    /* padding:1% 1% 1% 2%; */
+    margin: 1%;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+    height: 80%;
+  }
+  #lower_div1 div h3 {
+    font-size: 15px;
+  }
+  #carouselExampleControls h2 {
+    text-align: center;
+  }
+  #lower_div h2 {
+    text-align: center;
+  }
+}

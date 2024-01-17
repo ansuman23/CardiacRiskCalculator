@@ -1,0 +1,284 @@
+@media screen and (min-width: 821px) {
+
+    .form-div{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        width: 80%;
+        height: auto;
+        margin: 4% 10% ;
+        padding: 10px;
+        border: black;
+        border-radius: 10px;
+        background-color:#FCAEAE;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    body {
+        background-color: #FFEADD;
+    }
+
+    #content{
+        font-size: large;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    input{
+        border: 1px solid grey;
+        border-radius: 4px;
+    }
+
+    .input-group{
+        display: flex;
+        flex-direction: column;
+        margin: 0 1.5%;
+    }
+
+    #basic{
+        display: flex;
+        justify-content: center;
+        margin: 1.75%;
+    }
+    #bp{
+        display: flex;
+        width: 45%;
+        margin-left: 2.5%;
+        justify-content: flex-start;
+    }
+
+    #cholesterol{
+        display: flex;
+        justify-content: center;
+        margin: 1% 2.25%;
+    }
+    #cholesterol>*{
+        margin: 1% ;
+    }
+
+    #more-info{
+        display: flex;
+        margin: 1.25% ;
+        justify-content: center;
+        width: 50%;
+    }
+
+    .radio-btn-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 1%;
+    }
+    .radio-btn-wrapper {
+        width: 100%;
+        float: left;
+        margin: 0 5px 0 0;
+        height: 40px;
+        position: relative;
+    }
+    .radio-btn-wrapper input[type="radio"] {
+        opacity: 0.011;
+        z-index: 100;
+    }
+    .radio-btn-wrapper input[type="radio"]:checked + label {
+        background: #20b8be;
+        border-radius: 4px;
+      }
+    .radio-btn {
+        background-color: grey;
+        border: 1px solid #4A4A4A;
+        border-radius: 3px;
+        color: white;
+        font-size: 14px;
+        line-height: 39px;
+        width: 100%;
+        padding-left: 3%;
+    }
+    .radio-btn:hover{
+        cursor: pointer;
+        transform: scale(1.025);
+    }
+    .radio-btn-selected {
+        background-color: #198DAE;
+        border: 1px solid #55BC7E;
+        border-radius: 3px;
+        color: white;
+        font-size: 14px;
+        line-height: 39px;
+        width: 100%;
+    }
+
+    .bi{
+        font-size: small;
+        margin:  0 0 0 5px;
+    }
+
+    nav div span>.bi{
+        font-size: x-large;
+    }
+
+    #submit{
+        margin-top: 2%;
+        margin-left: 2.5%;
+        margin-bottom: 3%;
+        width: 30%;
+        background-color: green;
+    }
+
+    #sex-label{
+        margin-top: 3.2%;
+    }
+    #diabetes-label{
+        margin-top: 3%;
+        margin-left: 1%;
+    }
+    #hdl_ch_label, #tot_ch_label{
+        margin-top: 4.65%;
+        margin-left: 1%;
+    }
+    #bp-more-info{
+        display: flex;
+        gap: 4%;
+    }
+
+}
+
+@media screen and (max-width: 820px) {
+
+    .form-div{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        width: 80%;
+        height: auto;
+        margin: 4% 10% ;
+        padding: 10px;
+        border: black;
+        border-radius: 10px;
+        background-color:#FCAEAE;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    body {
+        background-color: #FFEADD;
+    }
+
+    #content{
+        font-size: large;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    input{
+        margin: 1% 0%;
+        border: 1px solid grey;
+        border-radius: 4px;
+    }
+
+    .input-group{
+        display: flex;
+        flex-direction: column;
+        margin: 0 1.5%;
+    }
+
+    #basic{
+        display: flex;
+        justify-content: center;
+        margin: 3.5%;
+    }
+
+    #bp{
+        display: flex;
+        width: 70%;
+        margin-left: 4%;
+        justify-content: flex-start;
+    }
+
+    #cholesterol{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 4.25%;
+    }
+    #cholesterol>*{
+        margin: 1% ;
+    }
+
+    #more-info{
+        display: flex;
+        margin: 3.5%;
+        justify-content: center;
+    }
+    .more-info>*{
+        width: 100%;
+    }
+
+
+    .radio-btn-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 1%;
+    }
+    .radio-btn-wrapper {
+        width: 100%;
+        float: left;
+        margin: 0 5px 0 0;
+        height: 40px;
+        position: relative;
+    }
+    .radio-btn-wrapper input[type="radio"] {
+        opacity: 0.011;
+        z-index: 100;
+    }
+    .radio-btn-wrapper input[type="radio"]:checked + label {
+        background: #20b8be;
+        border-radius: 4px;
+      }
+    .radio-btn {
+        background-color: grey;
+        border: 1px solid #4A4A4A;
+        border-radius: 3px;
+        color: white;
+        font-size: 14px;
+        line-height: 39px;
+        width: 100%;
+        padding-left: 3%;
+    }
+    .radio-btn:hover{
+        cursor: pointer;
+        transform: scale(1.025);
+    }
+    .radio-btn-selected {
+        background-color: #198DAE;
+        border: 1px solid #55BC7E;
+        border-radius: 3px;
+        color: white;
+        font-size: 14px;
+        line-height: 39px;
+        width: 100%;
+    }
+
+    .bi{
+        font-size: small;
+        margin:  0 0 0 5px;
+    }
+
+
+    #submit{
+        margin-left: 4.5%;
+        margin-bottom: 3%;
+        width: 30%;
+        background-color: green;
+    }
+
+    #sex-label{
+        margin-top: 10%;
+    }
+    #diabetes-label{
+        margin-top: 10%;
+        margin-left: 1%;
+    }
+}
